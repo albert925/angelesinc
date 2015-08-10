@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-08-2015 a las 17:20:33
+-- Tiempo de generación: 10-08-2015 a las 18:08:32
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -73,7 +73,7 @@ INSERT INTO `bodega` (`id_bodega`, `nam_bd`, `map_bd`, `dir_bd`, `pslc_bd`, `tel
 CREATE TABLE IF NOT EXISTS `cliente` (
 `id_cl` int(11) NOT NULL,
   `nam_cl` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `cliente`
@@ -83,7 +83,8 @@ INSERT INTO `cliente` (`id_cl`, `nam_cl`) VALUES
 (1, 'Blusas'),
 (2, 'Acesorios'),
 (3, 'Jeans'),
-(4, 'Otros');
+(4, 'Otros'),
+(5, 'todos');
 
 -- --------------------------------------------------------
 
@@ -167,6 +168,7 @@ CREATE TABLE IF NOT EXISTS `factura` (
   `n_vent` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
   `p_cod` int(11) DEFAULT NULL,
   `us_id` int(11) DEFAULT NULL,
+  `uni_f` text COLLATE utf8_spanish_ci NOT NULL,
   `cant_f` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
   `subt_f` decimal(10,0) DEFAULT NULL,
   `total_f` decimal(10,0) DEFAULT NULL,
@@ -1426,22 +1428,24 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `mark_id` int(11) DEFAULT NULL,
   `precA_p` decimal(10,0) DEFAULT NULL,
   `precN_p` decimal(10,0) DEFAULT NULL,
+  `precT_p` decimal(10,0) NOT NULL,
   `cant_p` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `txt_p` text COLLATE utf8_spanish_ci NOT NULL,
   `fech_p` date DEFAULT NULL,
   `coleccion_Y` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `estd_p` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`cod_p`, `nam_p`, `cl_id`, `tip_id`, `mark_id`, `precA_p`, `precN_p`, `cant_p`, `txt_p`, `fech_p`, `coleccion_Y`, `estd_p`) VALUES
-(13, 'funcioneee', 1, 1, 7, '0', '250000', '125', '', '0000-00-00', '', '1'),
-(14, 'producto2', 1, 4, NULL, '0', '1850000', '56', '', '0000-00-00', '', '1'),
-(15, 'producto4', 2, 4, 7, '0', '145000', '12', '', '0000-00-00', '', '1'),
-(17, 'pantalon', 3, 4, NULL, '300000', '150000', '45', '<p>descripcion</p>\r\n', '0000-00-00', '', '1');
+INSERT INTO `producto` (`cod_p`, `nam_p`, `cl_id`, `tip_id`, `mark_id`, `precA_p`, `precN_p`, `precT_p`, `cant_p`, `txt_p`, `fech_p`, `coleccion_Y`, `estd_p`) VALUES
+(13, 'funcioneee', 1, 1, 7, '0', '250000', '0', '125', '', '0000-00-00', '', '1'),
+(14, 'producto2', 1, 4, NULL, '0', '1850000', '0', '56', '', '0000-00-00', '', '1'),
+(15, 'producto4', 2, 4, 7, '0', '145000', '0', '12', '', '0000-00-00', '', '1'),
+(17, 'pantalon', 3, 4, NULL, '300000', '150000', '0', '45', '<p>descripcion</p>\r\n', '0000-00-00', '', '1'),
+(18, '3 precios', 5, 4, NULL, '10000', '10000', '10005', '20', '<p>tres precios</p>\r\n', '0000-00-00', '', '1');
 
 -- --------------------------------------------------------
 
@@ -2877,7 +2881,7 @@ MODIFY `id_bodega` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-MODIFY `id_cl` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id_cl` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `departamento`
 --
@@ -2927,7 +2931,7 @@ MODIFY `id_muni` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1113;
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-MODIFY `cod_p` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+MODIFY `cod_p` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT de la tabla `p_t`
 --

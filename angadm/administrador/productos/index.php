@@ -118,10 +118,12 @@
 							}
 						?>
 					</select>
-					<label><b>Precio mayor</b></label>
-					<input type="number" name="pcA" placeholder="solo números (10000.00)" />
-					<label><b>Precio normal</b></label>
+					<label><b>Precio superior</b></label>
+					<input type="number" name="pcA" placeholder="solo números (10000.00)" required />
+					<label><b>Precio inferior</b></label>
 					<input type="number" name="pcN" placeholder="solo números (10000.00)" required="required" />
+					<label><b>Precio acesorios</b></label>
+					<input type="number" name="pcT" placeholder="solo números (10000.00)" required />
 					<label><b>Cantidad</b></label>
 					<input type="number" name="cant" required="required" />
 					<label><b>Descripción</b></label>

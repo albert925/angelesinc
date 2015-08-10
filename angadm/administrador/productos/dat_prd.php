@@ -29,6 +29,7 @@
 				$mkD=$dtp['mark_id'];
 				$pcaD=$dtp['precA_p'];
 				$pcnD=$dtp['precN_p'];
+				$pctD=$dtp['precT_p'];
 				$ctD=$dtp['cant_p'];
 				$txD=$dtp['txt_p'];
 			}
@@ -221,10 +222,12 @@
 							}
 						?>
 					</select>
-					<label><b>Precio anterior</b></label>
+					<label><b>Precio superior</b></label>
 					<input type="number" name="pcA" value="<?php echo $pcaD ?>" placeholder="solo números (10000.00)" />
-					<label><b>Precio actual</b></label>
+					<label><b>Precio inferior</b></label>
 					<input type="number" name="pcN" value="<?php echo $pcnD ?>" placeholder="solo números (10000.00)" required="required" />
+					<label><b>Precio acesorios</b></label>
+					<input type="number" name="pcT" value="<?php echo $pctD ?>" placeholder="solo números (10000.00)" required />
 					<label><b>Cantidad</b></label>
 					<input type="number" name="cant" value="<?php echo $ctD ?>" required="required" />
 					<label><b>Descripción</b></label>

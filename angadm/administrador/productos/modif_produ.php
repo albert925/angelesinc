@@ -17,6 +17,7 @@
 		$d=$_POST['Smk'];//Marca
 		$e=$_POST['pcA'];//Precio Anterior
 		$f=$_POST['pcN'];//Precio Actual
+		$i=$_POST['pcT'];//precio tercero
 		$g=$_POST['cant'];//Cantidad
 		$h=$_POST['desPF'];//Descripcion
 		$diH=date("d");
@@ -32,7 +33,8 @@
 		}
 		else{
 			if ($d=="0" || $d=="") {
-				$ingresar="UPDATE producto set nam_p='$a',cl_id='$b',tip_id='$c',precA_p='$e',precN_p='$f',cant_p='$g',txt_p='$h' where cod_p=$idR";
+				$ingresar="UPDATE producto set nam_p='$a',cl_id='$b',tip_id='$c',
+					precA_p='$e',precN_p='$f',cant_p='$g',txt_p='$h',precT_p=$i where cod_p=$idR";
 				mysql_query($ingresar,$conexion) or die (mysql_error());
 				echo "<script type='text/javascript'>";
 					echo "alert('Producto modificado');";

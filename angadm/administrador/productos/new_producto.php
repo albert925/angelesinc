@@ -16,12 +16,13 @@
 		$d=$_POST['Smk'];//Marca
 		$e=$_POST['pcA'];//Precio Anterior
 		$f=$_POST['pcN'];//Precio Actual
+		$i=$_POST['pcT'];//precio tercero
 		$g=$_POST['cant'];//Cantidad
 		$h=$_POST['desP'];//Descripcion
 		$diH=date("d");
 		$meH=date("m");
 		$yeH=date("Y");
-		$fecha_hoy=$yeH."-".$meH.$diH;
+		$fecha_hoy=$yeH."-".$meH."-".$diH;
 		if ($a=="" || $b=="0" || $b=="" || $c=="0" || $c=="" || $f=="") {
 			echo "<script type='text/javascript'>";
 				echo "alert('Nombre, id tipo, id clase, id marca o Precio en blanco o 0');";
@@ -31,8 +32,8 @@
 		}
 		else{
 			if ($d=="0" || $d=="") {
-				$ingresar="INSERT into producto(nam_p,cl_id,tip_id,precA_p,precN_p,cant_p,txt_p,fech_p,estd_p) 
-					values('$a','$b','$c','$e','$f','$g','$h','$fecha_hoy','1')";
+				$ingresar="INSERT into producto(nam_p,cl_id,tip_id,precA_p,precN_p,cant_p,txt_p,fech_p,estd_p,precT_p) 
+					values('$a','$b','$c','$e','$f','$g','$h','$fecha_hoy','1',$i)";
 				mysql_query($ingresar,$conexion) or die (mysql_error());
 				echo "<script type='text/javascript'>";
 					echo "alert('Producto ingresado');";
