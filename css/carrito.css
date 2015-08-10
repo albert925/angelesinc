@@ -1,0 +1,130 @@
+hgroup{
+	text-align: center;
+}
+	hgroup h1,h3{
+		color: #EC268F;
+	}
+	hgroup h2{
+		margin: 0;
+		padding: 0;
+	}
+table{
+	border:1px solid #DBDBDB;
+	margin: 1em auto;
+	text-align: center;
+}
+	table td{
+		padding: 0.5em;
+	}
+#botonSps{
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	margin: 1em auto;
+}
+	#botonSps a{
+		background: #EC268F;
+		color: #fff;
+		padding: 0.5em 1em;
+	}
+	#botonSps a:hover,#botonSps a:active{
+		background: #BD1E73;
+	}
+#colordat{
+	background: #E0E0E0;
+}
+	#datusers label{
+		padding: 0.5em 1em;
+	}
+#disTH{
+	background: #E0E0E0;
+}
+#disTotal{
+	background: #B5B5B5;
+}
+#im_carrito{
+	margin: 1em auto;
+	width: 20%;
+}
+#pasos{
+	display: flex;
+	justify-content: center;
+}
+	#pasos div{
+		background-size: cover;
+		text-align: center;
+		padding-bottom: 0.5em;
+		width: 17em;
+	}
+		#pasos div h2{
+			margin: 0;
+		}
+	#pasos #Psa{
+		background: url(../imagenes/carritoPasoSelect.png) no-repeat center;
+		color:#fff;
+	}
+	#pasos #Psb{
+		background: url(../imagenes/carritoHecho.png) no-repeat center;
+		color:#fff;
+	}
+	#pasos .fonflechas{
+		background: url(../imagenes/carritoPaso.png) no-repeat center;
+	}
+.eliminar_carr{
+	background: url(../imagenes/delete.png) no-repeat center;
+	background-size: cover;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+}
+.eliminar_carr:hover{
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+	.ifor_carrito figure{
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		display: flex;
+		padding: 1em 0;
+	}
+		.ifor_carrito figure figcaption{
+			font-size: 18px;
+			text-align: justify;
+		}
+		.ifor_carrito figure img{
+			height: 8em;
+			width: 10em;
+		}
+	.ifor_carrito #ifcA{
+		background: #EC268F;
+		color:#fff;
+	}
+	.ifor_carrito #ifcB{
+		background: #D8D9D9;
+		color:#575756;
+	}
+	.ifor_carrito #ifcC{
+		color: #EC268F;
+	}
+@media screen and (max-width: 700px){
+	#botonSps{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		text-align: center;
+	}
+		#botonSps a{
+			margin: 0.25em 0;
+		}
+			.ifor_carrito figure img{
+				display: none;
+			}
+			.ifor_carrito figure figcaption{
+				padding: 1em 2em;
+			}
+}

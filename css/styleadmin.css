@@ -1,0 +1,120 @@
+a{
+	text-decoration: none;
+}
+	section	h2{
+		text-align: center;
+	}
+#bdds{
+	margin: 1em auto;
+	width: 30%;
+}
+#depar_muni{
+	text-transform: lowercase;
+}
+#cajas_al{
+	margin-bottom: 1em;
+}
+#logo{
+	position: inherit;
+	margin: 0 auto;
+	width: 21em;
+}
+#mnP{
+	margin: 0 auto;
+	width: 90%;
+}
+#mnA{
+	display: flex;
+	-webkit-justify-content: space-around;
+	-ms-justify-content: space-around;
+	justify-content: space-around;
+}
+	#mnA a{
+		background: #EC268F;
+		color: #fff;
+		padding: 0 1em;
+		text-decoration: none;
+	}
+	#mnA a:hover,#mnA a:active{
+		background: #D14A6A;
+	}
+#mnB{
+	box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+	display: flex;
+	-webkit-justify-content: flex-end;
+	-ms-justify-content: flex-end;
+	justify-content: flex-end;
+}
+	#mnB a{
+		color: #000;
+		padding: 0.5em 1em;
+		text-decoration: none;
+	}
+	#mnB a:hover,#mnB a:active,.selC{
+		color: #EC268F;
+		border-bottom: 2px solid #EC268F;
+	}
+#otraL{
+	font-family: 'Kotta One', serif;
+}
+.artflex{
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+}
+	.columninput input[type=number]{
+		margin: 0 auto;
+		width: 90%;
+	}
+.flexjustyA,.flexjustyB{
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	margin-top: 1em;
+}
+	.flexjustyB figure,.flexjustyB form{
+		margin-bottom: 1em;
+		width: 40%;
+	}
+	.flexjustyB h2{
+		text-align: center;
+	}
+.lkP{
+	background: #EC268F;
+	color: #fff;
+	padding: 0.5em 0;
+}
+.lkP:hover,.lkP:active{
+	background: #C61975;
+}
+.ocultingre{
+	height: 0;
+	overflow: hidden;
+}
+@media screen and (max-width: 750px){
+		#mnA a{
+			border-bottom: 1px solid #D14A6A;
+			padding: 0.5em 1em;
+		}
+	#mnB,#mnA{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		text-align: center;
+	}
+	.flexjustyA,.flexjustyB,.artflex{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		text-align: center;
+	}
+		.flexjustyB figure,.flexjustyB form,#bdds{
+			margin: 0 auto 1em auto;
+			width: 90%;
+		}
+}

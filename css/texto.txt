@@ -1,0 +1,13 @@
+1. Nombre de la pestaña en el navegador(F)
+[2. Miniatura en la pestaña  FAVICON]
+[3.En el link de inicio de sesión, la palabra "Inicio" en lugar de "Iniciar" (F)]
+[4. "Preséntate" con tilde (F)]
+5. Cambiar imágenes de slider principal: Alta resolución (Banco de imágenes) (F)
+        a. Cambiar botones de flechas
+6. Incluir texto en las imágenes e hipervículo (F)
+7. Aviso de cookies (F)
+[8. Diseñar widget de inicio de sesión con RRSS: Revisar página de Converse (F)]
+[9. CAMBIAR FUENTES DE TODO EL TEXTO: 
+http://www.dafont.com/es/yanone-kaffeesatz.font?text=SOY+IFIGENIA&back=theme]
+13. Cambiar la ubicación del feed de los usuarios de la plataforma (F)
+14. En NUEVA COLECCIÓN pober un plugin animado (F)

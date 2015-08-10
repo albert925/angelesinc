@@ -1,0 +1,21 @@
+﻿http://inquilino.co/
+http://constructorafutumatrix.com/
+http://ladrilleramerkagres.com/
+http://inversioneskyse.com/
+http://decoflores.com.co/
+http://conaxport.com/corpoces/
+http://conaxport.com/observatorio
+http://www.mesadeparticipacioncucuta.org/
+http://conaxport.com/nogal/
+http://conaxport.com/jeans/
+http://conaxport.com/angeles/
+http://soyifigenia.com/
+0-1.A que clientes va dirigido (Departamental, Nacional o Internacional)
+1.Especificar o definir de que lo que va llevar la pagina en la parte interna php y mysql
+2.Referencias de paginas diseño
+3.Referencias de paginas estructura (internamente-[php-MysQl])
+4.Colores que quiera manejar la pagina, prefeblimente de colores del logo.
+5.Tipo de fuentes que quiera manejar la pagina que sean de licencia libre y facil de entender para sus clientes.
+6.Información de la empresa y contacto
+7.Otras cosas que se pueden modificar desde del administrador
+8.redes solciales que tendra la pagina: F,G,T,I y otros

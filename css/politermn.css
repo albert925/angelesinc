@@ -1,0 +1,35 @@
+.animflx{
+	display: flex;
+}
+	.animflx #mnF{
+		text-align: center;
+		width: 30%;
+	}
+		.animflx #mnF div{
+			background: #84DDBF;
+			cursor: pointer;
+			margin: 0.5em 0;
+			padding: 1em 0;
+		}
+		.animflx #mnF div:hover{
+			background: #6CB99F;
+		}
+	.animflx #cjPs{
+		width: 70%;
+	}
+.cajterpol{
+	height: 0;
+	overflow: hidden;
+	padding: 0 1em;
+}
+@media screen and (max-width: 750px){
+	.animflx{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.animflx #mnF,.animflx #cjPs{
+		margin: 0 auto;
+		width: 90%;
+	}
+}

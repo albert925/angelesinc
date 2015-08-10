@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, maximun-scale=1" />
+	<title>Angeles Inc</title>
+	<link rel="icon" href="../imagenes/icono.png" />
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<script src="../js/jquery_2_1_1.js"></script>
+	<script type="text/javascript">
+		setTimeout(direiconar,5000);
+		function direiconar () {
+			window.location.href="../registro";
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<figure id="logo">
+			<a href="../">
+				<img src="../imagenes/2.png" alt="logo" />
+			</a>
+		</figure>
+		<aside id="extr">
+			<input type="search" id="bgnP" placeholder="Busqueda" />
+			<!-- <figure style="background-image:url(<?php echo $imaavatar ?>);"></figure> -->
+		</aside>
+	</header>
+	<nav id="mnP">
+		<a href="../">Inicio</a>
+		<a href="../nosotros">Marca</a>
+		<a href="../campa">Colecciones</a>
+		<a href="../productos">Productos</a>
+		<a href="../video">Videos</a>
+		<a href="../prensa">Prensa</a>
+		<a href="../contacto">Donde Estamos</a>
+		<a href="../contacto/ind2x.php">Contáctenos</a>
+		<a href="../registro" class="selB">Mi perfil/Regístrate</a>
+	</nav>
+	<figure id="flecMnp">
+		<img src="abajo.png" alt="abajo" />
+	</figure>
+	<section>
+		<h1>Registro Completado</h1>
+		<article id="automargen">
+			<p>
+				Te ha registrado satisfactoriamente, te ha llegado un link al correo que te registraste para activar la cuenta.
+			</p>
+		</article>
+	</section>
+	<footer>
+		<article id="automargen" class="footeflx">
+			<article class="columart">
+				<a href="../">Inicio</a>
+				<a href="../nosotros">Marca</a>
+				<a href="../campa">Colecciones</a>
+				<a href="../productos">Productos</a>
+				<a href="../video">Videos</a>
+			</article>
+			<article class="columart">
+				<a href="../prensa">Prensa</a>
+				<a href="../contacto">Donde Estamos</a>
+				<a href="../contacto/ind2x.php">Contáctenos</a>
+				<?php
+					if ($inicius=="0") {
+				?>
+				<a href="../registro" class="selB">Mi perfil/Regístrate</a>
+				<?php
+					}
+					else{
+				?>
+				<a href="../usuario"><?php echo "$nomus"; ?></a>
+				<?php
+					}
+				?>
+				<div>
+					<a href="../politicas.php">Políticas</a> y <a href="../terminos.php">Terminos y condiciones</a>
+				</div>
+			</article>
+			<article class="columart">
+				<h2 id="Serv"><a href="#">Servicios</a></h2>
+			</article>
+			<article class="columart">
+				<h2>Diseño</h2>
+				<a href="http://conaxport.com/" target="_blank" id="cnxpt">Conaxport</a>
+			</article>
+		</article>
+	</footer>
+</body>
+</html>
