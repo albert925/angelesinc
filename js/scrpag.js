@@ -8,9 +8,10 @@ function inicio_pagina () {
 	$("#bgnP").keydown(busq_general);
 	$("#bgnP").keyup(busq_general);
 	$("#decar").load("informacion_carrito.php");
-	$("#reg").on("click",abrirsesion);
+	$("#reg,#avatar").on("click",abrirsesion);
 	$("#irdos").on("click",ingresuses);
 	$("#mnmov").on("click",abrirmenP);
+	$("#get3").on("click",deslkycolprectres);
 	$(".submen").on("click",abrirsubmenu);
 	if ($(window).width()>=800) {
 		$("#bcicbs").on("click",abrirsearch);
@@ -143,5 +144,25 @@ function animarsearch () {
 	else{
 		$(this).animate({width:"150px"}, 500);
 		$(".search").animate({width:"20%"}, 500);
+	}
+}
+function deslkycolprectres (rt) {
+	rt.preventDefault();
+	var codR=$(this).attr("data-id");
+	var arpr=new Array();
+	var canok=0;
+	for (var i = 0; i < $(".prck").length; i++) {
+		if ($(".prck")[i].checked==true) {
+			canok=1;
+		}
+	}
+	if (canok==0) {
+		alert("selecione un precio");
+	}
+	else{
+		$(".prck:checked").each(function () {
+			arpr.push($(this).val());
+		});
+		window.location.href="carrito.php?cod="+codR+"&ppC="+arpr;
 	}
 }

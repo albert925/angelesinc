@@ -1,0 +1,52 @@
+#campverdise{
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+}
+	#campverdise #genfig{
+		width: 48%;
+	}
+.campadise{
+	/*background: url(../imagenes/f7.jpg) no-repeat center;background-size: cover;*/
+	background:rgba(255,255,255,0.5); 
+	display: flex;
+}
+	.campadise img{
+		width: 40%;
+	}
+	.campadise figcaption{
+		padding: 0 0.5em;
+		width: 60%;
+	}
+		.campadise figcaption a{
+			background: #F1DC96;
+			border-radius: 100%;
+			color: #000;
+			font-size: 20px;
+			padding: 0.5em 2em;
+		}
+		.campadise figcaption a:hover{
+			background: #F1EBDB;
+		}
+		.campadise figcaption div{
+			margin: 0 auto;
+			width: 8em;
+		}
+		.campadise figcaption h3{
+			text-align: center;
+		}
+@media screen and (max-width: 1350px){
+	#campverdise{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+		#campverdise #genfig{
+			margin: 1em auto;
+			width: 90%;
+		}
+}

@@ -61,6 +61,7 @@
 	<title>Angeles Inc</title>
 	<link rel="icon" href="../imagenes/icono.png" />
 	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/iconos/style.css" />
 	<link rel="stylesheet" href="../css/style.css" />
 	<link rel="stylesheet" href="../css/default/default.css" />
 	<link rel="stylesheet" href="../css/nivo_slider.css" />
@@ -70,58 +71,93 @@
 <body>
 	<header>
 		<figure id="logo">
-			<a href="../">
-				<img src="../imagenes/2.png" alt="logo" />
-			</a>
+			<center>
+				<a href="../">
+					<img src="../imagenes/2.png" alt="logo" />
+				</a>
+			</center>
 		</figure>
 		<aside id="extr">
-			<input type="search" id="bgnP" placeholder="Busqueda" />
-			<!-- <figure style="background-image:url(<?php echo $imaavatar ?>);"></figure> -->
+			<article id="avatar" style="background-image:url(<?php echo $imaavatar ?>);">
+			</article>
+			<?php
+				if ($tipus!="1") {
+			?>
+			<article id="carrito">
+				<a href="../carrito.php">
+					<span class="icon-carritoi"></span>
+					<span id="decar">0</span>					
+				</a>
+			</article>
+			<?php
+				}
+				//<a href="carrito.php" id="carajax">Mi carrito (0 artículo[$000])</a>
+			?>
 		</aside>
 	</header>
-	<nav id="mnP">
-		<a href="../">Inicio</a>
-		<a href="../nosotros">Empresa</a>
-		<a href="../campa">Colecciones</a>
-		<a href="../productos">Productos</a>
-		<a href="../video">Videos</a>
-		<a href="../prensa" class="selB">Eventos</a>
-		<a href="../contacto">Donde Estamos</a>
-		<a href="../contacto/ind2x.php">Contáctenos</a>
-		<?php
-			if ($tipus!="1") {
-		?>
-		<a href="../carrito.php" id="carajax">Mi carrito (0 artículo[$000])</a>
-		<?php
-			}
-		?>
-		<?php
-			if ($inicius=="0") {
-		?>
-		<a href="../registro" id="reg">Mi perfil/Regístrate</a>
-		<?php
-			}
-			else{
-		?>
-		<a href="../usuario" id="log"><?php echo "$nomus"; ?></a>
-		<?php
-			}
-		?>
-	</nav>
-	<figure id="flecMnp">
-		<img src="abajo.png" alt="abajo" />
-	</figure>
-	<?php
-		if ($inicius!="0") {
-	?>
-	<aside id="login">
-		<a href="../usuario">Información</a>
-		<a href="../factura">Historial o Compras</a>
-		<a href="../cerrar/us.php">Salir</a>
-	</aside>
-	<?php
-		}
-	?>
+	<article id="mnuPp">
+		<nav id="mnP">
+			<ul>
+				<li><a href="../index.php">Inicio</a></li>
+				<li><a href="../nosotros">Empresa</a></li>
+				<li><a href="../campa">Colecciones</a></li>
+				<li class="submen" data-num="1"><a href="../productos">Productos</a>
+					<ul class="children1">
+						<?php
+							$CLou="SELECT * from cliente order by nam_cl asc";
+							$sql_clou=mysql_query($CLou,$conexion) or die (mysql_error());
+							while ($ouA=mysql_fetch_array($sql_clou)) {
+								$idCLy=$ouA['id_cl'];
+								$nmCLy=$ouA['nam_cl'];
+						?>
+						<li><a href="../productos/ind2x.php?tp=<?php echo $idCLy ?>"><?php echo "$nmCLy"; ?></a></li>
+						<?php
+							}
+						?>
+					</ul>
+				</li>
+				<li><a class="selB" href="../prensa">Eventos</a></li>
+				<li class="submen" data-num="2"><a href="../contacto">Contacto</a>
+					<ul class="children2">
+						<li><a href="../contacto">Donde Estamos</a></li>
+						<li><a href="../contacto/ind2x.php">Contáctenos</a></li>
+					</ul>
+				</li>
+				<?php
+					if ($inicius=="0") {
+						//<li><a href="../video">Videos</a></li>
+				?>
+				<li><a href="../registro" id="reg">Usuario</a></li>
+				<?php
+					}
+					else{
+				?>
+				<li class="submen" data-num="3"><a href="../usuario"><?php echo "$nomus"; ?></a>
+					<ul class="children3">
+						<li><a href="../usuario">Información</a></li>
+						<li><a href="../factura">Historial o Compras</a></li>
+						<li><a href="../cerrar/us.php">Salir</a></li>
+					</ul>
+				</li>
+				<?php
+					}
+				?>
+			</ul>
+		</nav>
+		<article id="redes">
+			<a href="https://www.facebook.com/pages/Bodega-Los-Angeles-Inc/515911208524753?fref=ts" target="_blank"><span class="icon-facebook4"></span></a>
+			<a href="" target="_blank"><span class="icon-twitter4"></span></a>
+			<a href="https://instagram.com/losangelesinc/" target="_blank"><span class="icon-instagram2"></span></a>
+			<a href="https://www.youtube.com/results?search_query=bodega+los+angelesinc" target="_blank"><span class="icon-youtube5"></span></a>
+		</article>
+		<div id="mnmov"><span class="icon-menu"></span></div>
+		<article class="search">
+			<div id="bcicbs"><span class="icon-search"></span></div>
+			<div id="dish">
+				<input type="search" id="bgnP" placeholder="Busqueda" />
+			</div>
+		</article>
+	</article>
 	<aside id="resultado">
 	</aside>
 	<aside id="igredos">
@@ -139,11 +175,8 @@
 			</article>
 		</form>
 	</aside>
-	<figure id="fodA" class="modelang">
-		<h1>EVENTOS</h1>
-	</figure>
+	<h1><?php echo "$nmE"; ?></h1>
 	<section id="automargen">
-		<h2 id="hdos"><?php echo "$nmE"; ?></h2>
 		<figure>
 			<div class="slider-wrapper theme-default">
 				<div id="slider" class="nivoSlider">
@@ -196,6 +229,12 @@
 		</article>
 	</section>
 	<footer>
+		<article id="redes" class="auclasmarg">
+			<a href="https://www.facebook.com/pages/Bodega-Los-Angeles-Inc/515911208524753?fref=ts" target="_blank"><span class="icon-facebook4"></span></a>
+			<a href="" target="_blank"><span class="icon-twitter4"></span></a>
+			<a href="https://instagram.com/losangelesinc/" target="_blank"><span class="icon-instagram2"></span></a>
+			<a href="https://www.youtube.com/results?search_query=bodega+los+angelesinc" target="_blank"><span class="icon-youtube5"></span></a>
+		</article>
 		<article id="automargen" class="footeflx">
 			<article class="columart">
 				<a href="../">Inicio</a>
@@ -205,7 +244,7 @@
 				<a href="../video">Videos</a>
 			</article>
 			<article class="columart">
-				<a href="../prensa" class="selB">Eventos</a>
+				<a href="../prensa">Eventos</a>
 				<a href="../contacto">Donde Estamos</a>
 				<a href="../contacto/ind2x.php">Contáctenos</a>
 				<?php
@@ -223,14 +262,11 @@
 				<div>
 					<a href="../politicas.php">Políticas</a> y <a href="../terminos.php">Terminos y condiciones</a>
 				</div>
-			</article>
-			<article class="columart">
-				<h2 id="Serv"><a href="#">Servicios</a></h2>
-			</article>
-			<article class="columart">
-				<h2>Diseño</h2>
-				<a href="http://conaxport.com/" target="_blank" id="cnxpt">Conaxport</a>
-			</article>
+			</article> 
+		</article>
+		<article class="fooffin">
+			CONAXPORT © 2015 &nbsp;&nbsp;todos los derechos reservados &nbsp;- &nbsp;PBX (5) 841 733 &nbsp;&nbsp;Cúcuta - Colombia &nbsp;&nbsp;
+			<a href="http://conaxport.com/" target="_blank">www.conaxport.com</a>
 		</article>
 	</footer>
 </body>

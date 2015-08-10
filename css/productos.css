@@ -1,3 +1,30 @@
+#mnV{
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction:column;
+	margin-right: 1em;
+	text-align: center;
+	width: 20%;
+}
+	#mnV a{
+		border-bottom: 2px solid #E5E5E5;
+		color:#000;
+		text-decoration: none;
+		padding: 0.5em 1em;
+	}
+	#mnV a:hover{
+		color: #EC268F;
+	}
+#nw_produ{
+	display: flex;
+	margin: 0 auto;
+	max-width: 1100px;
+}
+#prdonw{
+	width: 80%;
+}
+.anuncio{display: none;}
 .descipVer{
 	display: flex;
 }
@@ -35,46 +62,20 @@
 .dp_mn{
 	text-transform: lowercase;
 }
-.flexartcl{
-	display: flex;
-	-webkit-justify-content: space-between;
-	-ms-justify-content: space-between;
-	justify-content: space-between;
+.dscar{
+	margin-top: 2em;
 }
-.flexartclB,#filtros{
-	display: flex;
-	-webkit-justify-content: space-around;
-	-ms-justify-content: space-around;
-	justify-content: space-around;
-}
-.flexartclC,.fleaxtDlx{
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: space-between;
-	-ms-justify-content: space-between;
-	justify-content: space-between;
-}
-.flexartclD{
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-}
-	.flexartclC figure{
-		margin: 0 auto;
-		width: 40%;
+	.dscar a{
+		background: #51CFC4;
+		color: #fff;
+		padding: 0.5em 1em;
+		text-decoration: none;
 	}
-	.fleaxtDlx figure{
-		width: 40%;
+	.dscar a:hover,.dscar a:active{
+		background: #CC2A8D;
 	}
-.flexanormal{
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: space-around;
-	-ms-justify-content: space-around;
-	justify-content: space-around
+@media screen and (max-width: 1350px){
+	#mnV{
+		display: none;
+	}
 }

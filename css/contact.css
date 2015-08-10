@@ -1,0 +1,48 @@
+#bodeS{
+	border-radius: 8px;
+	box-shadow: 0 0 5px #000;
+	margin-top:1em; 
+	padding: 0 0.5em;
+}
+#conDsds{
+	margin: 0 auto;
+	width: 40%;
+}
+#cotDis{
+	color:#EC268F;
+	text-align: center;
+}
+#mapalk{
+	color: #000;
+	text-decoration: underline;
+}
+#mapalk:hover{
+	color: #EE268F;
+}
+#Wh{
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	display: flex;
+	margin: 0 auto;
+	width: 8em;
+}
+	#Wh img{
+		width: 2em;
+	}
+.flexanormal{
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	-ms-justify-content: space-around;
+	justify-content: space-around
+}
+@media screen and (max-width: 1050px){
+	.flexanormal{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+}

@@ -57,8 +57,10 @@
 			$ffPr=$gh['fech_p'];
 			$prAPr=$gh['precA_p'];
 			$prcPr=$gh['precN_p'];
+			$prtPr=$gh['precT_p'];
 			$precioUno=number_format($prAPr);
 			$precioDos=number_format($prcPr);
+			$precioTres=number_format($prtPr);
 		}
 		$primera_imagen="SELECT * from images_p where p_cod='$idPr' order by id_img_p asc limit 1";
 		$sql_pryimg=mysql_query($primera_imagen,$conexion) or die (mysql_error());
@@ -244,9 +246,12 @@
 				<?php
 					if ($tipus!="1") {
 				?>
-				<b><strike>$<?php echo "$precioUno"; ?></strike></b>
-				<b>$<?php echo "$precioDos"; ?></b>
-				<a href="carrito.php?cod=<?php echo $codR ?>">Comprar</a>
+				<input type="checkbox" id="tt1" class="prck" value="<?php echo $prAPr ?>" />&nbsp;<label for="tt1"><b>Precio Superior:</b> $<?php echo "$precioUno"; ?></label><br />
+				<input type="checkbox" id="tt2" class="prck" value="<?php echo $prcPr ?>" />&nbsp;<label for="tt2"><b>Precio Inferior:</b> $<?php echo "$precioDos"; ?></label><br />
+				<input type="checkbox" id="tt3" class="prck" value="<?php echo $prtPr ?>" />&nbsp;<label for="tt3"><b>Precio Acesorios:</b> $<?php echo "$precioTres"; ?></label><br />
+				<div class="dscar">	
+					<a id="get3" href="carrito.php?cod=<?php echo $codR ?>" data-id="<?php echo $codR ?>">Agregar al carrito</a>
+				</div>
 				<?php
 					}
 				?>
@@ -302,30 +307,30 @@
 		</article>
 		<article id="automargen" class="footeflx">
 			<article class="columart">
-				<a href="../">Inicio</a>
-				<a href="../nosotros">Empresa</a>
-				<a href="../campa">Colecciones</a>
-				<a href="../productos">Productos</a>
-				<a href="../video">Videos</a>
+				<a href="index.php">Inicio</a>
+				<a href="nosotros">Empresa</a>
+				<a href="campa">Colecciones</a>
+				<a href="productos">Productos</a>
+				<a href="video">Videos</a>
 			</article>
 			<article class="columart">
-				<a href="../prensa">Eventos</a>
-				<a href="../contacto">Donde Estamos</a>
-				<a href="../contacto/ind2x.php">Contáctenos</a>
+				<a href="prensa">Eventos</a>
+				<a href="contacto">Donde Estamos</a>
+				<a href="contacto/ind2x.php">Contáctenos</a>
 				<?php
 					if ($inicius=="0") {
 				?>
-				<a href="../registro">Mi perfil/Regístrate</a>
+				<a href="registro">Mi perfil/Regístrate</a>
 				<?php
 					}
 					else{
 				?>
-				<a href="../usuario"><?php echo "$nomus"; ?></a>
+				<a href="usuario"><?php echo "$nomus"; ?></a>
 				<?php
 					}
 				?>
 				<div>
-					<a href="../politicas.php">Políticas</a> y <a href="../terminos.php">Terminos y condiciones</a>
+					<a href="politicas.php">Políticas</a> y <a href="terminos.php">Terminos y condiciones</a>
 				</div>
 			</article> 
 		</article>

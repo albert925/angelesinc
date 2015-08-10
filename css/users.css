@@ -1,0 +1,14 @@
+#usimages{
+	margin: 0 auto;
+	width: 50%;
+}
+@media screen and (max-width: 1050px){
+	#usimages{
+		width: 90%;
+	}
+	.flexartcl{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+}

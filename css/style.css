@@ -270,7 +270,7 @@ input[type=submit]:hover,input[type=submit]:active{
 	text-transform: uppercase;
 	width:10em;
 }
-.columninput{
+.columninput,.columart{
 	display: flex;
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
@@ -288,6 +288,40 @@ input[type=submit]:hover,input[type=submit]:active{
 .dell:hover,.dell:active{
 	background: #000000;
 }
+.flexartcl{
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+}
+.flexartclB,#filtros{
+	display: flex;
+	-webkit-justify-content: space-around;
+	-ms-justify-content: space-around;
+	justify-content: space-around;
+}
+.flexartclC,.fleaxtDlx{
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+}
+.flexartclD{
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+	.flexartclC figure{
+		margin: 1em auto;
+		width: 30%;
+	}
+	.fleaxtDlx figure{
+		width: 40%;
+	}
 .flxgA{
 	display: flex;
 	-webkit-flex-wrap: wrap;

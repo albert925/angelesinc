@@ -11,9 +11,9 @@
 		}
 		$fomatoA=number_format($cantidad);
 		$fomatoB=number_format($total);
-		echo "Mi carrito ($fomatoA articulos[$$fomatoB])";
+		echo "$fomatoA";
 	}
 	else{
-		echo "Mi carrito (0 articulos[$000])";
+		echo "0";
 	}
 ?>

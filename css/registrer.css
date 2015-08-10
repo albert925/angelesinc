@@ -1,0 +1,13 @@
+.flexartclB{
+	display: flex;
+	-webkit-justify-content: space-around;
+	-ms-justify-content: space-around;
+	justify-content: space-around;
+}
+@media screen and (max-width: 1050px){
+	.flexartclB{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+}

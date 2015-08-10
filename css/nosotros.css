@@ -1,0 +1,74 @@
+.cont{
+	cursor: pointer;
+	text-align: center;
+}
+.cont:hover,.cont:active{
+	text-decoration: underline;
+}
+.micmd{
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+}
+	.micmd #contcnosotros{
+		padding: 0 0.5em;
+		width: 70%;/*40%*/
+	}
+	.micmd #mnm{
+		width: 30%;
+		text-align: center;
+	}
+.modelang{
+	height: 25em;
+	margin: -2em auto 0 auto;
+}
+	.modelang h1{
+		color: #fff;
+		font-size: 60px;
+		left: -37%;
+		position: relative;
+		text-shadow: 0 0 4px #000;
+		top: 80%;
+	}
+	.modelang #hunodos{
+		color: #fff;
+		font-size: 60px;
+		left: -27%;
+		position: relative;
+		text-shadow: 0 0 4px #000;
+		top: 80%;
+	}
+.stsc{
+	height: 0;
+	overflow: hidden;
+	text-align: justify;
+}
+	.stsc h2{
+		color: #EC268F;
+		text-align: center;
+	}
+@media screen and (max-width: 1350px){
+	.micmd{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+		.micmd #mnm{
+			margin: 0 auto;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			width: 95%;
+		}
+		.micmd #contcnosotros{
+			margin: 0 auto;
+			-webkit-order: 2;
+			-ms-order: 2;
+			order: 2;
+			width: 90%;
+		}
+		.modelang #hunodos{
+			left: -7%;
+		}
+}
